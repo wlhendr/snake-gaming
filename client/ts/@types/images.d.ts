@@ -1,0 +1,1 @@
+declare module '*.png'; // keeps typescript linter from complaining about image imports

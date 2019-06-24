@@ -1,0 +1,37 @@
+{
+  "name": "watt-center-snake",
+  "version": "0.1.0",
+  "description": "Simple snake game for Clemson's Watt Center exterior media lights, controlled from mobile website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbnietert/watt-center-snake.git"
+  },
+  "author": "Sloan Nietert",
+  "license": "MIT",
+  "main": "server/server.js",
+  "bugs": {
+    "url": "https://github.com/sbnietert/watt-center-snake/issues"
+  },
+  "homepage": "https://github.com/sbnietert/watt-center-snake#readme",
+  "dependencies": {
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "@types/socket.io-client": "^1.4.32",
+    "express": "^4.16.3",
+    "parcel-bundler": "^1.9.7",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "socketio-wildcard": "^2.0.0",
+    "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "build-client": "npx parcel build client/*.html --public-url ./",
+    "start-client": "npx parcel client/*.html",
+    "start-server": "node server/server.js",
+    "start": "node server/server.js",
+
+    "start-all": "concurrently --kill-others \"node server/server.js\" \"npx parcel build client/*.html --public-url ./ && npx parcel client/*.html\""
+  }
+}
